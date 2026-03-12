@@ -574,6 +574,10 @@ document.addEventListener('DOMContentLoaded', () => {
   buildExpansion('all');
   buildHeatmap();
 });
+
+window.addEventListener("message", (event) => {
+  console.log("Parent URL:", event.data.page);
+});
 </script>
 </body>
 </html>
