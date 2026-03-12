@@ -576,7 +576,10 @@ document.addEventListener('DOMContentLoaded', () => {
   buildHeatmap();
 });
 
-document.getElementById("url").innerText = document.referrer;
+const params = new URLSearchParams(window.location.search);
+const dashboard = params.get("dashboard");
+
+document.getElementById("url").innerText = dashboard;
   
 </script>
 </body>
